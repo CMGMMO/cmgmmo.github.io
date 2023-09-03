@@ -170,9 +170,10 @@
                 .then(data => {
                     if (data.players) {
                         const onlinePlayers = data.players.online;
-
+
+
                         for (let i = 0; i < onlinePlayers + 1; i++) {
-                            displayPlayerCountWithDelay(i, 500);
+                            displayPlayerCountWithDelay(i, 10);
                         }
                         displayPlayerCountWithDelay(`${i}`, 0);
                     }
