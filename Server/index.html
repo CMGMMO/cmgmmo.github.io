@@ -155,27 +155,16 @@
     </style>
     <script>
         function fetchPlayerCount() {
+            const ip = "cmgmmo.mc.in.th:21356"
             const playerCountElement = document.getElementById('playerCount');
-
-            const displayPlayerCountWithDelay = (count, delay) => {
-                setTimeout(() => {
-                    playerCountElement.textContent = count;
-                }, delay);
-            };
-
-            const apiUrl = "https://api.mcsrvstat.us/bedrock/3/cmgmmo.mc.in.th:21356";
+            const apiUrl = `https://api.mcsrvstat.us/bedrock/3/${ip}`;
 
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
                     if (data.players) {
                         const onlinePlayers = data.players.online;
-
-
-                        for (let i = 0; i < onlinePlayers + 1; i++) {
-                            displayPlayerCountWithDelay(i, 10);
-                        }
-                        displayPlayerCountWithDelay(`${i}`, 0);
+                        playerCountElement.textContent = onlinePlayers
                     }
                 })
                 .catch(error => {
