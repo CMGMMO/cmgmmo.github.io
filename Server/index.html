@@ -168,7 +168,8 @@
                     }
                 })
                 .catch(error => {
-                    console.error('Error fetching player count:', error);
+                    console.error('Error fetching player count:', error
+                    playerCountElement.textContent = `Error fetching player count: ${error}`
                 });
         }
 
@@ -213,7 +214,7 @@
             <div class="server-details">
                 <h3>Server Details:</h3>
                 <ul>
-                    <li><strong>Server Name:</strong> CMGMMO Server</li>
+                    <li><strong>Server Name:</strong> CMGMMO!</li>
                     <li><strong>Server Address:</strong> cmgmmo.mc.in.th</li>
                     <li><strong>Port:</strong> 21356</li>
                 </ul>
