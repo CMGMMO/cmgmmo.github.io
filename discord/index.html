@@ -2,22 +2,259 @@
 <html>
 
 <head>
-  <title>Redirect!</title>
-  <style>
-    body {
-      background-color: #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta property="og:title" content="@CMGMMO's Discord">
+    <meta property="og:description" content="Join our Discord Community">
+    <meta property="og:image" content="../img/cmg.png">
+    <meta property="og:url" content="https://cmgmmo.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@CMGMMO Discord!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="../img/cmg.png">
+    <script src="./script.js"></script>
+    <style>
+        @media (max-width: 768px) {
+            img.w-48 {
+                max-width: 80%;
+                height: auto;
+            }
+        }
 
-    iframe {
-      width: 800px;
-      height: 450px;
-      border: none;
-    }
-  </style>
-  <meta http-equiv="refresh" content="0;url=https://discord.gg/JjchmEtqXp">
+        .fade-in-background {
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        body {
+            backdrop-filter: blur(3px);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 10px;
+            max-width: 90%;
+            display: inline-block;
+            border: 5px solid rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            color: #e0dede;
+            margin-top: 0;
+            transition: color, transform 0.1s ease;
+        }
+
+        h2:hover {
+            color: #fcffa0;
+            margin-top: 0;
+            transform: scale(1.05);
+        }
+
+        p {
+            color: #e0dede;
+            margin: 10px 0;
+        }
+
+        @keyframes pop {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        #playerCount {
+            color: #189618;
+            font-weight: bold;
+            animation: pop 1s infinite;
+        }
+
+
+        #yellow {
+            color: #ffee6f;
+            font-weight: bold;
+        }
+
+        button {
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .server-details {
+            color: #3d3d3d;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .server-details h3 {
+            color: #f5f2f2;
+            margin-top: 0;
+            transition: color 0.15s ease;
+        }
+
+        .server-details h3:hover {
+            color: #ffff82;
+            margin-top: 0;
+        }
+
+        .server-details ul {
+            color: #bfbdbd;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .server-details li {
+            color: #bfbdbd;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            color: #f4f4f4;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img.w-48 {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .fade-in {
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rotate {
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageUrls = ['../img/1.png', '../img/2.png', '../img/3.png', '../img/4.png', '../img/5.png', '../img/6.png', '../img/7.png', '../img/8.png'];
+            const randomIndex = Math.floor(Math.random() * imageUrls.length);
+            const backgroundImage = new Image();
+            backgroundImage.src = imageUrls[randomIndex] ?? '../img/1.png';
+            backgroundImage.onload = function () {
+                document.body.style.backgroundImage = `url('${backgroundImage.src}')`;
+                document.body.classList.add('fade-in-background');
+            };
+        })
+
+        function openMinecraft() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isIOS = /iphone|ipad|ipod/.test(userAgent);
+
+            const instructions = document.getElementById('instructions');
+            const button = document.getElementById('connect-button');
+
+            if (isIOS) {
+                instructions.innerHTML = `
+            <p>Sorry, now you are using iOS so I can't add the server automatically.
+            Please add the server manually.</p>
+        `;
+            } else {
+                window.location.href = 'minecraft://?addExternalServer=§l§eCMGMMO|cmgmmo.mc.in.th:21356';
+                instructions.innerHTML = `
+            <p>Look like you didn't teleport to Minecraft?</p>
+            <p>Please add the server manually.</p>
+        `;
+            }
+            instructions.classList.add('fade-in');
+            button.classList.add('rotate');
+        }
+    </script>
 </head>
+
+<body>
+    <main>
+        <div class="container">
+            <img src="../img/title.png" alt="Logo"
+                class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
+            <p>Minecraft Bedrock Server <span id="yellow">CMGMMO</span></p>
+            <p>The Minecraft Bedrock MMO Vanilla Server!</p>
+            <p>Join our Discord Community! Everyone in there will help you about your question.</p>
+            <br>
+            <button id="cmgmmodis">Join Discord!</button>
+            <button id="connect-button" onclick="openMinecraft()">Add Server</button>
+            <br>
+            <div class="server-details">
+                <h3>Server Details:</h3>
+                <ul>
+                    <li><strong>Server Name:</strong> CMGMMO!</li>
+                    <li><strong>Server Address:</strong> cmgmmo.mc.in.th</li>
+                    <li><strong>Server Port:</strong> 21356</li>
+                </ul>
+            </div>
+            <div id="instructions"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; CMGMMO. All rights reserved.</p>
+    </footer>
+</body>
+
 </html>
