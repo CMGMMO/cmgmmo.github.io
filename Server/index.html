@@ -13,6 +13,10 @@
             .container {
                 padding: 10px;
             }
+
+            p {
+                font-size: 14px;
+            }
         }
 
         .fade-in-background {
@@ -52,6 +56,7 @@
         }
 
         .container {
+            max-width: 90%;
             display: inline-block;
             padding: 20px;
             border: 5px solid rgba(0, 0, 0, 0.5);
@@ -151,8 +156,8 @@
         }
 
         img.w-48 {
-            width: 500px !important;
-            padding: 10px 20px;
+            max-width: 100%;
+            height: auto;
         }
 
 
@@ -193,9 +198,9 @@
             const backgroundImage = new Image();
             backgroundImage.src = imageUrls[randomIndex] ?? './img/1.png';
             backgroundImage.onload = function () {
-            document.body.style.backgroundImage = `url('${backgroundImage.src}')`;
-            document.body.classList.add('fade-in-background');
-        };
+                document.body.style.backgroundImage = `url('${backgroundImage.src}')`;
+                document.body.classList.add('fade-in-background');
+            };
         })
 
         function fetchPlayerCount() {
