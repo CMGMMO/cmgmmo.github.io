@@ -10,14 +10,12 @@
     <script src="./script.js"></script>
     <style>
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            p {
-                font-size: 14px;
+            img.w-48 {
+                max-width: 80%;
+                height: auto;
             }
         }
+
 
         .fade-in-background {
             animation: fade-in 1s ease-in-out;
@@ -56,9 +54,9 @@
         }
 
         .container {
+            padding: 10px;
             max-width: 90%;
             display: inline-block;
-            padding: 20px;
             border: 5px solid rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5);
@@ -254,7 +252,6 @@
         <div class="container">
             <img src="./img/title.png" alt="Logo"
                 class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
-            <!-- <h2>@CMGMMO!</h2> -->
             <p>Minecraft Bedrock Server <span id="yellow">CMGMMO</span></p>
             <p>The Minecraft Bedrock MMO Vanilla Server!</p>
             <p>Now Player(s) Online: <span id="playerCount">0</span>/30</p>
