@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = [
-        { id: "cmgmmodis", url: "https://discord.com/invite/JjchmEtqXp" },
+        { id: "cmgmmodis", url: "../discord/" },
+        { id: "plus", url: "../plus/"},
+        { id: "tour", url: "../Tournament/"},
     ];
 
     buttons.forEach(button => {

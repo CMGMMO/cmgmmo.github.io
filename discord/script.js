@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = [
         { id: "cmgmmodis", url: "https://discord.com/invite/JjchmEtqXp" },
+        { id: "back", url: "../Server" },
     ];
 
     buttons.forEach(button => {

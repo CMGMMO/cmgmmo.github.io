@@ -2,17 +2,20 @@
 <html>
 
 <head>
-    <meta property="og:title" content="@CMGMMO's Discord">
-    <meta property="og:description" content="Join our Discord Community">
-    <meta property="og:image" content="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
+    <meta property="og:title" content="ดิสคอร์ดของ CMGMMO">
+    <meta property="og:description" content="เข้าร่วมชุมชนของพวกเรา ดิสคอร์ด">
+    <meta property="og:image"
+        content="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
     <meta property="og:url" content="https://cmgmmo.github.io">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@CMGMMO Discord!</title>
+    <title>@CMGMMO ดิสคอร์ด!</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
+    <link rel="icon"
+        href="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
     <script src="./script.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700;900&display=swap');
         @media (max-width: 768px) {
             img.w-48 {
                 max-width: 80%;
@@ -41,7 +44,8 @@
             background-attachment: fixed;
             text-align: center;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-family: 'IBM Plex Sans Thai', Arial, sans-serif;
             height: 100vh;
             margin: 0;
             display: flex;
@@ -60,9 +64,9 @@
             padding: 10px;
             max-width: 90%;
             display: inline-block;
-            border: 5px solid rgba(0, 0, 0, 0.5);
+            border: 5px solid rgba(76, 76, 76, 0.5);
             border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(76, 76, 76, 0.5);
             backdrop-filter: blur(5px);
         }
 
@@ -166,17 +170,7 @@
             animation: fade-in 1s ease-in-out;
         }
 
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         .rotate {
             animation: rotate 1s linear infinite;
@@ -194,38 +188,13 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const imageUrls = ['../img/1.png', '../img/2.png', '../img/3.png', '../img/4.png', '../img/5.png', '../img/6.png', '../img/7.png', '../img/8.png'];
-            const randomIndex = Math.floor(Math.random() * imageUrls.length);
             const backgroundImage = new Image();
-            backgroundImage.src = imageUrls[randomIndex] ?? '../img/1.png';
+            backgroundImage.src = '../img/discord.png'
             backgroundImage.onload = function () {
                 document.body.style.backgroundImage = `url('${backgroundImage.src}')`;
                 document.body.classList.add('fade-in-background');
             };
         })
-
-        function openMinecraft() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isIOS = /iphone|ipad|ipod/.test(userAgent);
-
-            const instructions = document.getElementById('instructions');
-            const button = document.getElementById('connect-button');
-
-            if (isIOS) {
-                instructions.innerHTML = `
-            <p>Sorry, now you are using iOS so I can't add the server automatically.
-            Please add the server manually.</p>
-        `;
-            } else {
-                window.location.href = 'minecraft://?addExternalServer=§l§eCMGMMO|cmgmmo.mc.in.th:21356';
-                instructions.innerHTML = `
-            <p>Look like you didn't teleport to Minecraft?</p>
-            <p>Please add the server manually.</p>
-        `;
-            }
-            instructions.classList.add('fade-in');
-            button.classList.add('rotate');
-        }
     </script>
 </head>
 
@@ -234,22 +203,13 @@
         <div class="container">
             <img src="../img/title.png" alt="Logo"
                 class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
-            <p>Minecraft Bedrock Server <span id="yellow">CMGMMO</span></p>
-            <p>The Minecraft Bedrock MMO Vanilla Server!</p>
-            <p>Join our Discord Community! Everyone in there will help you about your question.</p>
+            <p>ไมน์คราฟต์เซิร์ฟเวอร์ <span id="yellow">CMGMMO</span></p>
+            <p>เซิร์ฟเวอร์ เก็บเวลตีมอน บนไมน์คราฟต์มือถือ!</p>
+            <p>เข้าร่วมชุมชนดิสคอร์ดของเรา ผู้คนในนั้นอาจช่วยตอบคำถามหรือข้อสงไสของคุณได้</p>
             <br>
-            <button id="cmgmmodis">Join Discord!</button>
-            <button id="connect-button" onclick="openMinecraft()">Add Server</button>
+            <button id="cmgmmodis">เข้าร่วม ดิสคอร์ด!</button>
+            <button id="back">ย้อนกลับ</button>
             <br>
-            <div class="server-details">
-                <h3>Server Details:</h3>
-                <ul>
-                    <li><strong>Server Name:</strong> CMGMMO!</li>
-                    <li><strong>Server Address:</strong> cmgmmo.mc.in.th</li>
-                    <li><strong>Server Port:</strong> 21356</li>
-                </ul>
-            </div>
-            <div id="instructions"></div>
         </div>
     </main>
     <footer>

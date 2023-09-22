@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <meta property="og:title" content="@CMGMMO+ Pack">
-    <meta property="og:description" content="Download CMGMMO+ Pack!">
+    <meta property="og:title" content="@CMGMMO+ รีซอสแพ็ค">
+    <meta property="og:description" content="ดาวน์โหลดรีซอสแพ็ค CMGMMO+">
     <meta property="og:image" content="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
     <meta property="og:url" content="https://cmgmmo.github.io">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add @CMGMMO Server!</title>
+    <title>ดาวน์โหลดรีซอสแพ็ค CMGMMO+</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="https://media.discordapp.net/attachments/661178624124387328/1119968914877718598/637f4609c09790004e2ed05d_vip.png?width=640&height=640">
     <script src="./script.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700;900&display=swap');
         @media (max-width: 768px) {
             img.w-48 {
                 max-width: 80%;
@@ -42,7 +43,8 @@
             background-attachment: fixed;
             text-align: center;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-family: 'IBM Plex Sans Thai', Arial, sans-serif;
             height: 100vh;
             margin: 0;
             display: flex;
@@ -167,17 +169,7 @@
             animation: fade-in 1s ease-in-out;
         }
 
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        
 
         .rotate {
             animation: rotate 1s linear infinite;
@@ -205,28 +197,7 @@
             };
         })
 
-        function openMinecraft() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isIOS = /iphone|ipad|ipod/.test(userAgent);
 
-            const instructions = document.getElementById('instructions');
-            const button = document.getElementById('connect-button');
-
-            if (isIOS) {
-                instructions.innerHTML = `
-            <p>Sorry, now you are using iOS so I can't add the server automatically.
-            Please add the server manually.</p>
-        `;
-            } else {
-                window.location.href = 'minecraft://?addExternalServer=§l§eCMGMMO|cmgmmo.mc.in.th:21356';
-                instructions.innerHTML = `
-            <p>Look like you didn't teleport to Minecraft?</p>
-            <p>Please add the server manually.</p>
-        `;
-            }
-            instructions.classList.add('fade-in');
-            button.classList.add('rotate');
-        }
     </script>
 </head>
 
@@ -235,22 +206,22 @@
         <div class="container">
             <img src="../img/cmgmmo+.png" alt="Logo"
                 class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
-            <p>Download <span id="yellow">CMGMMO+</span> Pack</p>
-            <p>Please selection version that you want!</p>
-            <p>* Recommenced latest version</p>
+            <p>ดาวน์โหลดรีซอสแพ็ค <span id="yellow">CMGMMO+</span></p>
+            <p>เลือกเวอชั่นของ รีซอสแพ็ค ที่คุณต้องการ!</p>
+            <p>แนะนำเวอชั่นล่าสุด</p>
             <br>
             <button id="1.1.0">Beta 1.2.0</button>
             <button id="1.1.0">Beta 1.1.0</button>
             <button id="1.0.0">Beta 1.0.0</button>
-            <button id="connect-button" onclick="openMinecraft()">Join Server</button>
-            <button id="cmgmmodis">Join Discord</button>
+            <button id="github">ประวัติการอัปเดต</button>
+            <button id="back">ย้อนกลับ..</button>
             <br>
             <div class="server-details">
-                <h3>Server Details:</h3>
+                <h3>รายละเอียดของเซิร์ฟเวอร์</h3>
                 <ul>
-                    <li><strong>Server Name:</strong> CMGMMO!</li>
-                    <li><strong>Server Address:</strong> cmgmmo.mc.in.th</li>
-                    <li><strong>Server Port:</strong> 21356</li>
+                    <li><strong>ชื่อเซิร์ฟเวอร์:</strong> CMGMMO!</li>
+                    <li><strong>ที่อยู่เซิร์ฟเวอร์:</strong> cmgmmo.mc.in.th</li>
+                    <li><strong>พอร์ตเซิร์ฟเวอร์:</strong> 21356</li>
                 </ul>
             </div>
             <div id="instructions"></div>

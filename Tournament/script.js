@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = [
-        { id: "cmgmmodis", url: "https://discord.com/invite/JjchmEtqXp" },
-        { id: "jointournament", url: "https://docs.google.com/forms/d/e/1FAIpQLSfryGqwfEjCUhTqdG4iZ0nVh9vcVwg2VGXgPaGDqY-qrjgDUw/viewform" }
+        { id: "back", url: "../Server/" },
+        { id: "jointournament", url: "https://docs.google.com/forms/d/e/1FAIpQLSfryGqwfEjCUhTqdG4iZ0nVh9vcVwg2VGXgPaGDqY-qrjgDUw/viewform?ontab=true" }
     ];
 
     buttons.forEach(button => {
