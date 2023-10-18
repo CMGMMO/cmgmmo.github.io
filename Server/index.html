@@ -215,7 +215,7 @@
                 .then(data => {
                     if (data.online) {
                         const onlinePlayers = data.players.online;
-                        playerCountElement.textContent = `${onlinePlayers ?? 0}/${data.players.max ?? 30}`;
+                        playerCountElement.textContent = `${onlinePlayers ?? 0}/${data.players.max ?? 30} คน`;
                         version.textContent = data.protocol.name
                     } else {
                         version.textContent = "เซิร์ฟเวอร์อาจะกำลัง อัพเดท หรือ ปรับปรุง"
@@ -264,7 +264,7 @@
                 class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
             <p>ไมน์คราฟต์เซิร์ฟเวอร์ <span id="yellow">CMGMMO</span></p>
             <p>เซิร์ฟเวอร์ เก็บเวลตีมอน บนไมน์คราฟต์มือถือ(Bedrock)</p>
-            <p>มีผู้คนกำลังเล่นอยู่: <span id="playerCount">กำลังโหลด..</span> คน</p>
+            <p>มีผู้คนกำลังเล่นอยู่: <span id="playerCount">กำลังโหลด..</span></p>
             <p>เซิร์ฟเวอร์เวอชั่น: <span id="version">กำลังโหลด..</span></p>
             <br>
             <button id="connect-button" onclick="openMinecraft()">เพิ่มเซิร์ฟเวอร์</button>
