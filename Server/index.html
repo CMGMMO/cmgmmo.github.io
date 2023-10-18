@@ -201,6 +201,7 @@
         function fetchPlayerCount() {
             const ip = "cmgmmo.mc.in.th:21356"
             const playerCountElement = document.getElementById('playerCount');
+            const version = document.getElementById('version');
             const apiUrl = `https://api.mcsrvstat.us/bedrock/3/${ip}`;
 
             fetch(apiUrl)
@@ -208,14 +209,16 @@
                 .then(data => {
                     if (data.online) {
                         const onlinePlayers = data.players.online;
-                        playerCountElement.textContent = onlinePlayers;
+                        playerCountElement.textContent = `${onlinePlayers ?? 0}/${data.players.max ?? 30}`;
+                        version.textContent = data.protocol.name
                     } else {
+                        version.textContent = "เซิร์ฟเวอร์อาจะกำลัง อัพเดท หรือ ปรับปรุง"
                         playerCountElement.textContent = "เซิร์ฟเวอร์กำลังปิดปรับปรุง";
                     }
                 })
                 .catch(error => {
                     console.error('Error fetching player count:', error);
-                    playerCountElement.textContent = `Error fetching player count: ${error}`;
+                    playerCountElement.textContent = `⚠️ ${error}`;
                 });
         }
 
@@ -255,7 +258,8 @@
                 class="w-48 h-auto mb-5 animate-heartbeat_3s_ease-in-out_infinite rounded">
             <p>ไมน์คราฟต์เซิร์ฟเวอร์ <span id="yellow">CMGMMO</span></p>
             <p>เซิร์ฟเวอร์ เก็บเวลตีมอน บนไมน์คราฟต์มือถือ(Bedrock)</p>
-            <p>มีผู้คนกำลังเล่นอยู่: <span id="playerCount">กำลังโหลด..</span>/30 คน</p>
+            <p>มีผู้คนกำลังเล่นอยู่: <span id="playerCount">กำลังโหลด..</span> คน</p>
+            <p>เซิร์ฟเวอร์เวอชั่น: <span id="version">กำลังโหลด..</span></p>
             <br>
             <button id="connect-button" onclick="openMinecraft()">เพิ่มเซิร์ฟเวอร์</button>
             <button id="cmgmmodis">เข้าร่วมดิสคอร์ด..</button>
