@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const buttons = [
             { id: "cmgmmodis", url: "../discord/" },
             { id: "cmgmmodiscord", url: "https://discord.com/invite/JjchmEtqXp" },
-            { id: "plus", url: "../plus/" },
             { id: "tour", url: "../Tournament/" },
-            { id: "github", url: "https://github.com/lnwAitJi/CMGMMO-Plus/" },
             { id: "back", url: "../Server/" },
             { id: "jointournament", url: "https://docs.google.com/forms/d/e/1FAIpQLSfryGqwfEjCUhTqdG4iZ0nVh9vcVwg2VGXgPaGDqY-qrjgDUw/viewform?ontab=true" }
         ];
