@@ -216,7 +216,7 @@
                     if (data.online) {
                         const onlinePlayers = data.players.online;
                         playerCountElement.textContent = `${onlinePlayers ?? 0}/${data.players.max ?? 30} คน`;
-                        version.textContent = data.protocol.name
+                        version.textContent = data.version
                     } else {
                         version.textContent = "เซิร์ฟเวอร์อาจะกำลัง อัพเดท หรือ ปรับปรุง"
                         playerCountElement.textContent = "เซิร์ฟเวอร์กำลังปิดปรับปรุง";
