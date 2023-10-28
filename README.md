@@ -43,3 +43,11 @@ This project is open-source and available under the [MIT License](LICENSE). You 
 - [lnwAitJi](https://github.com/lnwAitJi)
 
 Feel free to add any additional information, credits, or instructions specific to your project.
+
+* Note This Website using on CMGMMO Minecraft Server
+
+- Owner: [CMG Element CH](https://youtube.com/@cmgelementch1197?si=nofz-Xeub0Ear5Tg)
+The Project leader making a command and plan gameplay/map
+
+- Admin: [AitJi Gamer](https://youtube.com/@InwAitJi?si=tBV9xijFG65U8LqI)
+it me that making this website, I scripting a Server eg. ui/system building a map and helping player >3
