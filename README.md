@@ -32,8 +32,6 @@ This is a simple HTML and JavaScript webpage that displays the status of the CMG
 
 - This webpage uses the `api.mcsrvstat.us` API to check the server status.
 
-- Background images for the webpage are loaded randomly from a predefined list. (actually from discord btw)
-
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE). You are free to use, modify, and distribute it as needed.
