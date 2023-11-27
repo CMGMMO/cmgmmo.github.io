@@ -20,8 +20,6 @@ This is a simple HTML and JavaScript webpage that displays the status of the CMG
 
 5. You can also click the "เข้าร่วมดิสคอร์ด.." to join our discord community.
 
-6. By clicking at "ทัวร์นาเมนต์.." you can apply to our tournament (we accept applications every Sunday).
-
 ## Customization
 
 - You can customize the webpage by modifying the HTML and CSS to change its appearance.
