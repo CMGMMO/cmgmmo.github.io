@@ -1,6 +1,6 @@
 # CMGMMO Server!
 
-Quick teleportation [click.](https://cmgmmo.vercel.app)
+Quick teleportation [click.](https://cmgmmo.github.io)
 
 This is a simple HTML and JavaScript webpage that displays the status of the CMGMMO Minecraft server. It checks the server status using the `api.mcsrvstat.us` API and displays the number of online players. If the server is offline, it displays a message indicating that the server is under maintenance.
 
@@ -12,7 +12,7 @@ This is a simple HTML and JavaScript webpage that displays the status of the CMG
 
 ## How to Use
 
-1. Open the `https://cmgmmo.vercel.app` file in a web browser to view the CMGMMO server status page.
+1. Open the `cmgmmo.github.io/Server` file in a web browser to view the CMGMMO server status page.
 
 2. The webpage will automatically check the server status and display the number of online players.
 
