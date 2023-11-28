@@ -1,5 +1,7 @@
 # CMGMMO Server!
 
+Quick teleportation [click.](https://cmgmmo.github.io)
+
 This is a simple HTML and JavaScript webpage that displays the status of the CMGMMO Minecraft server. It checks the server status using the `api.mcsrvstat.us` API and displays the number of online players. If the server is offline, it displays a message indicating that the server is under maintenance.
 
 ## Features
